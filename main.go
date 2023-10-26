@@ -36,8 +36,8 @@ func newRouter() *mux.Router {
 	// the "PathPrefix" method acts as a matcher, and matches all routes starting
 	// with "/assets/", instead of the absolute route itself
 	r.PathPrefix("/assets/").Handler(staticFileHandler).Methods("GET")
-	r.HandleFunc("/bird", getBirdHandler).Methods("GET")
-	r.HandleFunc("/bird", createBirdHandler).Methods("POST")
+	r.HandleFunc("/bird", GetBirdHandler).Methods("GET")
+	r.HandleFunc("/bird", CreateBirdHandler).Methods("POST")
 	return r
 }
 
